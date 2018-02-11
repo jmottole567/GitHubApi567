@@ -14,7 +14,6 @@ class TestGithub(unittest.TestCase):
         repos = getRepos('stevenssec')
         self.assertIn('Alexa',repos)
     def testNumCommits(self):
-        self.assertGreaterEqual(getNumCommits('johnmottole','AgileMethodsProject'),30)
         self.assertGreaterEqual(getNumCommits('johnmottole','finalProj'),5)
         self.assertGreaterEqual(getNumCommits('johnmottole','iOSBluetoothCommunication'),2)
         self.assertGreaterEqual(getNumCommits('johnmottole','ssw322-group1'),18)
