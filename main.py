@@ -12,9 +12,7 @@ def getRepos(userName):
 def getNumCommits(userName, repoName):
     commits = requests.get('https://api.github.com/repos/' +userName+'/' + repoName + '/commits')
     commits_data = json.loads(commits.text)
-    for com in commits_data:
-        print com
-    print " "
+
     return len(commits_data)
 
 if __name__ == "__main__":
